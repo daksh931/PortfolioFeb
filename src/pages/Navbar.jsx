@@ -31,17 +31,18 @@ export default function Navbar() {
 
                         <div className="sm:flex  flex-col sm:flex-row sm:space-x-6 space-y-4 sm:space-y-0 hidden whitespace-nowrap  ">
 
-                        <Link
-    to="/"
-    className="flex items-center z-10 text-gray-700 relative group p-2"
->
-    <span className="mr-2 z-100"> <Home /> </span>
-    <span className="relative z-100 group-hover:text-black transition-all duration-200">
-        Home
-        {/* Background color grows from bottom to top */}
-        <span className="absolute bottom-0 left-0 w-full h-full bg-blue-600 scale-y-0 group-hover:scale-y-100 transform origin-bottom transition-transform duration-600"></span>
-    </span>
-</Link>
+                            <Link
+                                to="/"
+                                className="flex items-center z-10 text-gray-700 relative group p-2"
+                            >
+                                <span className="mr-2 z-100"> <Home /> </span>
+                                <span className="relative z-100 group-hover:text-black transition-all duration-200">
+                                    Home
+                                    {/* Background color grows from bottom to top */}
+                                    <span className="absolute bottom-0 left-0 w-full h-full bg-blue-600 scale-y-0 group-hover:scale-y-100 transform origin-bottom transition-transform duration-600">
+                                    </span>
+                                </span>
+                            </Link>
 
                             <Link to="/" className="flex items-center text-gray-700 hover:text-gray-900">
                                 <Home className="mr-2" /> Home

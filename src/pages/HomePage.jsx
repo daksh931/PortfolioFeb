@@ -1,7 +1,7 @@
-import AboutSection from './pages/AboutUsSection'
-import HeroSection from './pages/HeroSection'
-import Navbar from './pages/Navbar'
-import OurServices from './pages/OurServices'
+import AboutSection from './AboutUsSection'
+import HeroSection from './HeroSection'
+import Navbar from './Navbar'
+import OurServices from './OurServices'
 
 
 const HomePage = () => {
