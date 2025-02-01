@@ -14,18 +14,14 @@ function App() {
 
   return (
     <>
-<<<<<<< Updated upstream
+
       <Routes>
       <Route path="/" element={<Navbar />} />
-        <Route path="/herohome" element={<Herohome />} />
+      <Route path="/" element={<HeroSection />} />
+      <Route path="/" element={<AboutSection />} />
+      <Route path="/" element={<OurServices />} />
 
       </Routes>
-=======
-  <Navbar />
-  <HeroSection/>
-  <AboutSection/>
-  <OurServices/>
->>>>>>> Stashed changes
     </>
   )
 }
