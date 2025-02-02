@@ -1,4 +1,13 @@
 import React from 'react';
+import cloud from '../assets/img/cloud.png';
+import webdev from '../assets/img/webdev.png';
+import devlopment from '../assets/img/devlopment.png';
+import it from '../assets/img/it.png';
+import seo from '../assets/img/seo.png';
+import graphicDesigner from '../assets/img/graphicDesigner.png';
+import { motion } from "framer-motion";
+
+
 
 function OurServices() {
   return (
@@ -6,49 +15,51 @@ function OurServices() {
       <h2 className="text-4xl font-bold text-center mb-12">Our Services</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         <ServiceCard
-        //   icon={<FaGraphicDesign size={40} />}
+          image={graphicDesigner}
           title="Graphic Designer"
-          description="Wanna grow organically, then SEO is the best choice for your business.We help you to boost your search engine rankings and make your brand visible to your customers on search engines"
+          description="Wanna grow organically, then SEO is the best choice for your business. We help you boost your search engine rankings and make your brand visible to your customers on search engines."
         />
         <ServiceCard
-        //   icon={<FaCode size={40} />}
+          image={devlopment}
           title="Web Development"
-          description="Wanna grow organically, then SEO is the best choice for your business.We help you to boost your search engine rankings and make your brand visible to your customers on search engines"
+          description="Wanna grow organically, then SEO is the best choice for your business. We help you boost your search engine rankings and make your brand visible to your customers on search engines."
         />
         <ServiceCard
-        //   icon={<FaPenNib size={40} />}
+          image={it}
           title="Content Writing"
-          description="Wanna grow organically, then SEO is the best choice for your business.We help you to boost your search engine rankings and make your brand visible to your customers on search engines"
+          description="Wanna grow organically, then SEO is the best choice for your business. We help you boost your search engine rankings and make your brand visible to your customers on search engines."
         />
         <ServiceCard
-        //   icon={<FaCamera size={40} />}
+          image={devlopment}
           title="Photography"
-          description="Wanna grow organically, then SEO is the best choice for your business.We help you to boost your search engine rankings and make your brand visible to your customers on search engines"
+          description="Wanna grow organically, then SEO is the best choice for your business. We help you boost your search engine rankings and make your brand visible to your customers on search engines."
         />
         <ServiceCard
-        //   icon={<FaSearch size={40} />}
+          image={seo}
           title="SEO Optimization"
-          description="Wanna grow organically, then SEO is the best choice for your business.We help you to boost your search engine rankings and make your brand visible to your customers on search engines"
+          description="Wanna grow organically, then SEO is the best choice for your business. We help you boost your search engine rankings and make your brand visible to your customers on search engines."
         />
         <ServiceCard
-        //   icon={<FaCloud size={40} />}
+          image={cloud}
           title="Cloud Services"
-          description="Wanna grow organically, then SEO is the best choice for your business.We help you to boost your search engine rankings and make your brand visible to your customers on search engines"
+          description="Wanna grow organically, then SEO is the best choice for your business. We help you boost your search engine rankings and make your brand visible to your customers on search engines."
         />
       </div>
     </div>
   );
 }
 
-const ServiceCard = ({ icon, title, description }) => (
+const ServiceCard = ({ image, title, description }) => (
   <div className="p-10 shadow-lg hover:shadow-2xl hover:scale-105 transition-all">
     <div className="flex flex-col items-center text-center">
-      <div className="mb-4">{icon}</div>
+      <div className="mb-4">
+        <img src={image} alt={title} className="w-20 h-20 object-contain" />
+      </div>
       <h3 className="text-xl font-semibold mb-2">{title}</h3>
       <p className="text-gray-600 mb-4">{description}</p>
       <a
         href="#"
-        className="underline border-b-2 border-transparent hover:hover:text-orange-500 transition-all"
+        className="underline border-b-2 border-transparent hover:text-orange-500 transition-all"
       >
         Read More
       </a>

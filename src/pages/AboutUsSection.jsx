@@ -1,5 +1,9 @@
 import { Check, CheckCheckIcon, CheckCircle } from "lucide-react";
 import React from "react";
+import about from "../assets/img/about.png";
+import admin from "../assets/img/admin.png";
+import { motion } from "framer-motion";
+
 
 const AboutSection = () => {
   return (
@@ -27,10 +31,14 @@ const AboutSection = () => {
           </div>
         </div>
         <div className="flex justify-center">
-          <img
-            src="https://buddytecch.com/wp-content/uploads/2024/09/about-600x575.png"
+          <motion.img
+            src={admin}
             alt="Illustration"
             className="w-full max-w-lg"
+            initial={{ opacity: 0, x: 100 }} // Starts outside the screen
+            whileInView={{ opacity: 1, x: 0 }} // Moves into view
+            transition={{ duration: 1, ease: "easeOut" }}
+            viewport={{ once: true, amount: 0.3 }}
           />
         </div>
       </div>
