@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import heroImg1 from "../assets/img/heroImg1.png";
 import webdev from "../assets/img/webdev.png";
 import design from "../assets/img/design.png";
+import admin from "../assets/img/admin.png";
 
 const contentData = [
   {
@@ -16,7 +17,7 @@ const contentData = [
     description: "Our cutting-edge solutions help your business grow in the digital era.",
   },
   {
-    image: design,
+    image: admin,
     title: "Custom Web Solutions for You",
     description: "We build tailored websites that match your unique business needs.",
   },
