@@ -14,7 +14,9 @@ export default function Navbar() {
         { path: "/contact", label: "Contact Us", icon: <Mail /> },
     ];
     return (
-        <nav className="shadow-sm fixed w-full z-10 bg-gray-200">
+        <div className="sticky top-0 z-10">
+
+        <nav className="shadow-sm   w-full z-10 bg-gray-200">
 
             <div className="container mx-auto px-6 py-3 sm:flex justify-between   ">
                 <div className="container mx-auto px-6 py-3 flex justify-between align-middle self-center ">
@@ -113,5 +115,7 @@ export default function Navbar() {
                 </div>
             </div>
         </nav>
+        </div>
+
     );
 }

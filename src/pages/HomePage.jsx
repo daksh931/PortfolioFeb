@@ -10,15 +10,20 @@ import OurServices from './OurServices'
 const HomePage = () => {
     return (
       <>
-      <div>
+   
+
       <Navbar />
-      </div>
+      
+     
+     
         <HeroSection />
+
         <AboutSection />
         <OurServices />
         <WhyChooseUs/>
         <ContactUs/>
         <Footer/>
+   
       </>
     );
   }
