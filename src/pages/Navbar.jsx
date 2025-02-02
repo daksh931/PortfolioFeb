@@ -6,7 +6,9 @@ export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <nav className="shadow-sm fixed w-full z-10 bg-gray-200">
+        <div>
+
+        <nav className="shadow-sm  w-full z-10 bg-gray-200">
 
             <div className="container mx-auto px-6 py-3 sm:flex justify-between   ">
                 <div className="container mx-auto px-6 py-3 flex justify-between align-middle self-center ">
@@ -101,5 +103,7 @@ export default function Navbar() {
                 </div>
             </div>
         </nav>
+        </div>
+
     );
 }
