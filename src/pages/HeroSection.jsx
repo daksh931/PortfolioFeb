@@ -34,7 +34,7 @@ function HeroSection() {
   }, []);
 
   return (
-    <div className="relative flex flex-col md:flex-row items-center max-w-6xl mx-auto px-6 py-12 space-y-8 md:space-y-0 md:space-x-8 overflow-x-hidden border border-amber-600">
+    <div className="relative flex flex-col md:flex-row items-center max-w-6xl mx-auto px-6 py-12 space-y-8 md:space-y-0 md:space-x-8 overflow-x-hidden ">
       {/* Left Side Image (Comes from Left) */}
       <motion.div
         key={contentData[index].image}

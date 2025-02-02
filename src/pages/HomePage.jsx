@@ -6,37 +6,25 @@ import HeroSection from "./HeroSection";
 import Navbar from "./Navbar";
 import OurServices from "./OurServices";
 
+
 const HomePage = () => {
-<<<<<<< Updated upstream
     return (
       <>
-     
+   
+
       <Navbar />
       
-
+     
+     
         <HeroSection />
+
         <AboutSection />
         <OurServices />
         <WhyChooseUs/>
         <ContactUs/>
         <Footer/>
-    
+   
       </>
     );
   }
   export default HomePage;
-=======
-  return (
-    <>
-      <Navbar />
-      <HeroSection />
-      <AboutSection />
-      <OurServices />
-      <WhyChooseUs />
-      <ContactUs />
-      <Footer />
-    </>
-  );
-};
-export default HomePage;
->>>>>>> Stashed changes
