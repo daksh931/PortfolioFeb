@@ -41,14 +41,14 @@ function OurServices() {
 }
 
 const ServiceCard = ({ icon, title, description }) => (
-  <div className="p-6 border rounded-lg shadow-lg hover:shadow-2xl hover:scale-105 transition-all">
+  <div className="p-10 shadow-lg hover:shadow-2xl hover:scale-105 transition-all">
     <div className="flex flex-col items-center text-center">
       <div className="mb-4">{icon}</div>
       <h3 className="text-xl font-semibold mb-2">{title}</h3>
       <p className="text-gray-600 mb-4">{description}</p>
       <a
         href="#"
-        className="underline border-b-2 border-transparent hover:border-blue-500 hover:text-orange-500 transition-all"
+        className="underline border-b-2 border-transparent hover:hover:text-orange-500 transition-all"
       >
         Read More
       </a>
