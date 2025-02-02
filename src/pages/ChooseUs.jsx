@@ -1,4 +1,6 @@
 import React from "react";
+import goals from "../assets/img/goals.png";
+import { motion } from "framer-motion";
 
 function WhyChooseUs() {
   return (
@@ -29,10 +31,14 @@ function WhyChooseUs() {
         </div>
         {/* Right side image */}
         <div className="flex justify-center">
-          <img
-            src="https://buddytecch.com/wp-content/uploads/2024/10/goals0.png"
-            alt="Why Choose Us"
-            className="w-full max-w-lg rounded-lg shadow-lg"
+          <motion.img
+            src={goals}
+            alt="Illustration"
+            className="w-full max-w-lg"
+            initial={{ opacity: 0, x: 100 }} // Starts outside the screen
+            whileInView={{ opacity: 1, x: 0 }} // Moves into view
+            transition={{ duration: 1, ease: "easeOut" }}
+            viewport={{ once: true, amount: 0.3 }}
           />
         </div>
       </div>

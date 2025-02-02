@@ -10,7 +10,9 @@ import OurServices from './OurServices'
 const HomePage = () => {
     return (
       <>
-        <Navbar />
+      <div>
+      <Navbar />
+      </div>
         <HeroSection />
         <AboutSection />
         <OurServices />
