@@ -1,14 +1,14 @@
 import { Check, CheckCheckIcon, CheckCircle } from "lucide-react";
-import React from "react";
+import React, { useRef } from "react";
 import about from "../assets/img/about.png";
 import admin from "../assets/img/admin.png";
 import { motion } from "framer-motion";
 
-
 const AboutSection = () => {
+
   return (
     <section className="bg-white py-16 px-8">
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+      <motion.div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
         <div>
           <h2 className="text-orange-500 font-semibold">About Us</h2>
           <h1 className="text-4xl font-bold text-gray-900 mt-2">
@@ -39,9 +39,10 @@ const AboutSection = () => {
             whileInView={{ opacity: 1, x: 0 }} // Moves into view
             transition={{ duration: 1, ease: "easeOut" }}
             viewport={{ once: true, amount: 0.3 }}
+        
           />
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 };
