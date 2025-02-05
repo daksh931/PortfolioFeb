@@ -3,8 +3,13 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import design from "../assets/img/design.png";
-import tech1 from "../assets/img/web.png";
-import tech2 from "../assets/img/web.png";
+import tech1 from "../assets/img/tech/react.png";
+import tech2 from "../assets/img/tech/vite.png";
+import tech3 from "../assets/img/tech/java.png";
+import tech4 from "../assets/img/tech/jenkins.png";
+import tech5 from "../assets/img/tech/react.png";
+import tech6 from "../assets/img/tech/tailwind.png";
+
 
 export default function ProjectDetails() {
   const navigate = useNavigate();
@@ -66,7 +71,7 @@ export default function ProjectDetails() {
         // <span className="text-gray-700 font-semibold">Our Work</span>
       </div>
       {/* Project Title */}
-      <h1 className="text-4xl font-bold text-gray-900">Project Name</h1>
+      <h1 className="text-4xl font-bold text-gray-900">Recotech (Romainian) </h1>
       {/* Project Description & Image */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center my-12">
         <motion.div
@@ -186,10 +191,10 @@ export default function ProjectDetails() {
               <React.Fragment key={index}>
                 <img src={tech1} alt="Tech Logo" className="opacity-70 w-24" />
                 <img src={tech2} alt="Tech Logo" className="opacity-70 w-24" />
-                <img src={tech1} alt="Tech Logo" className="opacity-70 w-24" />
-                <img src={tech2} alt="Tech Logo" className="opacity-70 w-24" />
-                <img src={tech1} alt="Tech Logo" className="opacity-70 w-24" />
-                <img src={tech2} alt="Tech Logo" className="opacity-70 w-24" />
+                <img src={tech3} alt="Tech Logo" className="opacity-70 w-24" />
+                <img src={tech4} alt="Tech Logo" className="opacity-70 w-24" />
+                <img src={tech5} alt="Tech Logo" className="opacity-70 w-24" />
+                <img src={tech6} alt="Tech Logo" className="opacity-70 w-24" />
               </React.Fragment>
             ))}
           </motion.div>
