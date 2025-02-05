@@ -52,8 +52,7 @@ function ProjectCard({ project }) {
       whileHover={{ scale: 1.05, boxShadow: "0px 10px 25px rgba(0,0,0,0.15)" }}
       whileTap={{ scale: 0.98 }}
       className="relative cursor-pointer rounded-xl overflow-hidden border border-gray-300 shadow-lg transition duration-300 bg-white"
-    //   onClick={() => navigate(`/projects/${project.id}`)} 
-    onClick={() => navigate(`/projects/${project.id}`)} 
+      onClick={() => window.open(project.liveLink, "_blank")}
     >
       <img
         src={project.image}

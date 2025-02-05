@@ -16,9 +16,9 @@ const HomePage = () => {
    
 
       <Navbar />
-      <motion.div className="bg-orange-500/60 h-1 sticky top-17 z-10 origin-left rounded-xl" style={{scaleX:scrollYProgress}}>
+      <motion.div className="bg-orange-500/60 h-1 sticky top-17 z-10 origin-left rounded-xl" style={{scaleX:scrollYProgress}}  />
 
-      </motion.div>
+      
      
      
         <HeroSection />
