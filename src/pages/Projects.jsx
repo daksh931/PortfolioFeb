@@ -1,7 +1,7 @@
 "use client";
-import React from "react";
-import { useNavigate } from "react-router-dom";
-import { motion } from "framer-motion";
+import React, { useState } from "react";
+import { useNavigate, useParams } from "react-router-dom";
+import { motion, useAnimation } from "framer-motion";
 import design from "../assets/img/design.png";
 import tech1 from "../assets/img/tech/react.png";
 import tech2 from "../assets/img/tech/vite.png";
@@ -9,7 +9,31 @@ import tech3 from "../assets/img/tech/java.png";
 import tech4 from "../assets/img/tech/jenkins.png";
 import tech5 from "../assets/img/tech/react.png";
 import tech6 from "../assets/img/tech/tailwind.png";
+import { Pointer, PointerIcon } from "lucide-react";
 
+const projectData = {
+    recotech: {
+      title: "Recotech",
+      description: "This is the Recotech project description...",
+      image: design,
+    },
+    "music-school": {
+      title: "Music School",
+      description: "This is the Music School project description...",
+      image: design,
+    },
+    outfable: {
+      title: "OutFable",
+      description: "This is the OutFable project description...",
+      image: design,
+    },
+    slabpro: {
+      title: "Slab Pro",
+      description: "This is the Slab Pro project description...",
+      image: design,
+    },
+  };
+  
 
 export default function ProjectDetails() {
   const navigate = useNavigate();
@@ -57,6 +81,17 @@ export default function ProjectDetails() {
       name: "Michael Lee",
     },
   ];
+  const techLogos = [tech1, tech2, tech3, tech4, tech5, tech6];
+
+  const controls = useAnimation();
+  const [paused, setPaused] = useState(false);
+
+  const { projectId } = useParams();
+  const project = projectData[projectId]; // Get project details from object
+
+  if (!project) {
+    return <h1 className="text-3xl text-center mt-10">Project Not Found</h1>;
+  }
 
   return (
     <div className="px-6 lg:px-24 py-16">
@@ -71,7 +106,9 @@ export default function ProjectDetails() {
         // <span className="text-gray-700 font-semibold">Our Work</span>
       </div>
       {/* Project Title */}
-      <h1 className="text-4xl font-bold text-gray-900">Recotech (Romainian) </h1>
+      <h1 className="text-4xl font-bold text-gray-900">
+        Recotech (Romainian){" "}
+      </h1>
       {/* Project Description & Image */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center my-12">
         <motion.div
@@ -107,7 +144,6 @@ export default function ProjectDetails() {
             key={index}
             className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center"
           >
-            {/* Alternate Layout: Even index -> Text Left, Image Right | Odd index -> Image Left, Text Right */}
             {index % 2 === 0 ? (
               <>
                 <motion.div
@@ -170,6 +206,7 @@ export default function ProjectDetails() {
           </div>
         ))}
       </div>
+
       {/* Tech Stack - Auto Running Logos */}
       <div className="my-16 relative overflow-hidden">
         <h2 className="text-3xl font-bold text-center text-gray-900 mb-6">
@@ -179,30 +216,47 @@ export default function ProjectDetails() {
         <div className="relative flex items-center w-full">
           <motion.div
             className="flex space-x-12 min-w-max"
-            animate={{ x: ["0%", "-50%"] }}
+            animate={controls}
+            initial={{ x: "0%" }}
             transition={{
               repeat: Infinity,
               duration: 10,
               ease: "linear",
             }}
+            onMouseEnter={() => {
+              setPaused(true);
+              controls.stop();
+            }}
+            onMouseLeave={() => {
+              setPaused(false);
+              controls.start({ x: ["0%", "-50%"] });
+            }}
           >
-            {/* Duplicating logos for seamless looping */}
             {[...Array(2)].map((_, index) => (
               <React.Fragment key={index}>
-                <img src={tech1} alt="Tech Logo" className="opacity-70 w-24" />
-                <img src={tech2} alt="Tech Logo" className="opacity-70 w-24" />
-                <img src={tech3} alt="Tech Logo" className="opacity-70 w-24" />
-                <img src={tech4} alt="Tech Logo" className="opacity-70 w-24" />
-                <img src={tech5} alt="Tech Logo" className="opacity-70 w-24" />
-                <img src={tech6} alt="Tech Logo" className="opacity-70 w-24" />
+                {techLogos.map((logo, i) => (
+                  <motion.img
+                    key={i}
+                    src={logo}
+                    alt="Tech Logo"
+                    className="opacity-70 w-24"
+                    whileHover={{
+                      scale: 1.1, 
+                      cursor:Pointer,
+                      opacity: 1,
+                    }}
+                  />
+                ))}
               </React.Fragment>
             ))}
           </motion.div>
 
+          {/* Fade Effect at Ends */}
           <div className="absolute top-0 bottom-0 left-0 w-20 bg-gradient-to-r from-white to-transparent"></div>
           <div className="absolute top-0 bottom-0 right-0 w-20 bg-gradient-to-l from-white to-transparent"></div>
         </div>
       </div>
+
       {/* Happy Clients */}
       <div className="mt-16 text-center">
         <h2 className="text-3xl font-bold text-gray-900">Happy Clients</h2>

@@ -1,25 +1,30 @@
 import { motion } from "framer-motion";
-import it from '../assets/img/design.png';  
+import { useNavigate } from "react-router-dom"; 
+import it from "../assets/img/design.png";
 
 const projects = [
   {
-    name: "recotech.co",
-    liveLink: "https://daarry.co",
-    image: it, 
-  },
-  {
-    name: "music School",
-    liveLink: "https://coupledoor.com",
+    id: "recotech",
+    name: "Recotech.co",
+    liveLink: "/projects/recotech",
     image: it,
   },
   {
+    id: "music-school",
+    name: "Music School",
+    liveLink: "/projects/music-school",
+    image: it,
+  },
+  {
+    id: "outfable",
     name: "OutFable",
-    liveLink: "https://outfable.com",
+    liveLink: "/projects/outfable",
     image: it,
   },
   {
+    id: "slabpro",
     name: "Slab Pro",
-    liveLink: "https://slabpro.com",
+    liveLink: "/projects/slabpro",
     image: it,
   },
 ];
@@ -27,12 +32,11 @@ const projects = [
 export default function OurWork() {
   return (
     <div className="max-w-6xl mx-auto px-6 py-12">
-    {/* Heading Section */}
-    <div className="text-center mb-8">
+      {/* Heading Section */}
+      <div className="text-center mb-8">
         <h2 className="text-orange-500 font-semibold">Projects</h2>
         <h1 className="text-4xl font-bold text-gray-900 mt-2">
-        A small selection 
-        of our work.
+          A small selection of our work.
         </h1>
       </div>
 
@@ -47,13 +51,14 @@ export default function OurWork() {
 }
 
 function ProjectCard({ project }) {
+  const navigate = useNavigate(); 
+
   return (
     <motion.div
       whileHover={{ scale: 1.05, boxShadow: "0px 10px 25px rgba(0,0,0,0.15)" }}
       whileTap={{ scale: 0.98 }}
       className="relative cursor-pointer rounded-xl overflow-hidden border border-gray-300 shadow-lg transition duration-300 bg-white"
-    //   onClick={() => navigate(`/projects/${project.id}`)} 
-    onClick={() => navigate(`/projects/${project.id}`)} 
+      onClick={() => navigate(project.liveLink)} 
     >
       <img
         src={project.image}
