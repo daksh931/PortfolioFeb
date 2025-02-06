@@ -13,3 +13,7 @@
     color: var(--text-color);
   }
   
+  ::selection{
+    color: rgb(256, 145, 70);
+    background-color: rgba(225, 145, 145, 0.091);
+  }
