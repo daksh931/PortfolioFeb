@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom"; 
 import it from "../assets/img/design.png";
+import Navbar from "./Navbar";
 
 const projects = [
   {
@@ -27,10 +28,11 @@ const projects = [
     liveLink: "/projects/slabpro",
     image: it,
   },
-];
+];      
 
 export default function OurWork() {
   return (
+   
     <div className="max-w-6xl mx-auto px-6 py-12">
       {/* Heading Section */}
       <div className="text-center mb-8">
@@ -47,6 +49,7 @@ export default function OurWork() {
         ))}
       </div>
     </div>
+  
   );
 }
 
@@ -54,6 +57,8 @@ function ProjectCard({ project }) {
   const navigate = useNavigate(); 
 
   return (
+   
+   
     <motion.div
       whileHover={{ scale: 1.05, boxShadow: "0px 10px 25px rgba(0,0,0,0.15)" }}
       whileTap={{ scale: 0.98 }}
