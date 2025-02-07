@@ -35,14 +35,14 @@ export default function OurWork() {
     <div className="max-w-6xl mx-auto px-6 py-12">
       {/* Heading Section */}
       <div className="text-center mb-8">
-        <h2 className="text-orange-500 font-semibold">Projects</h2>
-        <h1 className="text-4xl font-bold text-gray-900 mt-2">
-          A small selection of our work.
+        <h2 className="text-orange-500 font-semibold text-4xl">Projects</h2>
+        <h1 className="text-2xl font-bold hover:text-blue-900 text-gray-700 mt-2">
+          Projects Handled Carefully and <br/> submitted to Clients successfully.
         </h1>
       </div>
 
       {/* Grid Section */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 space-y-2.5 space-x-6.5 gap-6">
         {projects.map((project) => (
           <ProjectCard key={project.id} project={project} />
         ))}
@@ -55,10 +55,12 @@ function ProjectCard({ project }) {
   const navigate = useNavigate();
 
   return (
+    <div className="space-y-3.5 mt-5">
+
     <motion.div
-      whileHover={{ scale: 1.05, boxShadow: "0px 10px 25px rgba(0,0,0,0.15)" }}
+      whileHover={{ scale: 1.02, boxShadow: "0px 10px 25px rgba(0,0,0,0.15)" }}
       whileTap={{ scale: 0.98 }}
-      className="relative cursor-pointer rounded-xl overflow-hidden border border-gray-300 shadow-lg transition duration-300 bg-white"
+      className="relative cursor-pointer rounded-xl  overflow-hidden border border-gray-300 shadow-lg transition duration-300 bg-white"
       onClick={() => navigate(`/projects/${project.id}`)}
     >
       <img
@@ -70,5 +72,7 @@ function ProjectCard({ project }) {
         <h2 className="text-lg font-semibold text-gray-800">{project.name}</h2>
       </div>
     </motion.div>
+    </div>
+
   );
 }

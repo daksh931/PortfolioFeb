@@ -9,39 +9,39 @@ import tech3 from "../assets/img/tech/java.png";
 import tech4 from "../assets/img/tech/jenkins.png";
 import tech5 from "../assets/img/tech/react.png";
 import tech6 from "../assets/img/tech/tailwind.png";
-import recotech from "../assets/img/ProjectRecotech/Login.png";
-import MusicSchool from "../assets/img/ProjectMusicSchool/Home.png";
-import signoracucina from "../assets/img/ProjectSignoracucina/Home.png";
-import { Pointer, PointerIcon } from "lucide-react";
 
-const projectData = {
-  recotech: {
-    title: "Recotech",
-    description: "This is the Recotech project description...",
-    image: recotech,
-  },
-  "music-school": {
-    title: "Music School",
-    description: "This is the Music School project description...",
-    image: MusicSchool,
-  },
-  signoracucina: {
-    title: "Signora Cucina - A Premium Food Delivery Experience",
-    description:
-      "Signora Cucina is a modern and seamless food delivery application designed to bring delicious meals straight to your doorstep. Developed by our team using React.js, Node.js, and other cutting-edge technologies, this platform ensures a smooth and intuitive user experience.With a focus on efficiency",
-    image: signoracucina,
-  },
-  slabpro: {
-    title: "Slab Pro",
-    description: "This is the Slab Pro project description...",
-    image: design,
-  },
-};
+import { Pointer, PointerIcon } from "lucide-react";
+import projectData from "./ProjectData";
+
+// const projectData = {
+//   recotech: {
+//     title: "Recotech",
+//     description: "This is the Recotech project description...",
+//     image: recotech,
+//   },
+//   "music-school": {
+//     title: "Music School",
+//     description: "This is the Music School project description...",
+//     image: MusicSchool,
+//   },
+//   signoracucina: {
+//     title: "Signora Cucina - A Premium Food Delivery Experience",
+//     description:
+//       "Signora Cucina is a modern and seamless food delivery application designed to bring delicious meals straight to your doorstep. Developed by our team using React.js, Node.js, and other cutting-edge technologies, this platform ensures a smooth and intuitive user experience.With a focus on efficiency",
+//     image: signoracucina,
+//   },
+//   slabpro: {
+//     title: "Slab Pro",
+//     description: "This is the Slab Pro project description...",
+//     image: design,
+//   },
+// };
 
 export default function ProjectDetails() {
   const { projectId } = useParams();
   const project = projectData[projectId]; // Get project details from object
 
+  console.log(project.length)
   if (!project) {
     return <h1 className="text-3xl text-center mt-10">Project Not Found</h1>;
   }
@@ -107,10 +107,13 @@ export default function ProjectDetails() {
         </span>{" "}
         // <span className="text-gray-700 font-semibold">Our Work</span>
       </div>
-      {/* Project Title */}
-      <h1 className="text-4xl font-bold text-gray-900">{project.title}</h1>
+
+
+
+      {/* Project Title
+      <h1 className="text-4xl font-bold text-gray-900">{project[0].title}</h1>
       {/* Project Description & Image */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center my-12">
+      {/* <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center my-12">
         <motion.div
           initial={{ opacity: 0, x: -100 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -118,7 +121,7 @@ export default function ProjectDetails() {
           viewport={{ once: true }}
         >
           <p className="text-lg text-gray-700 leading-relaxed">
-            {project.description}
+            {project[0].description}
           </p>
         </motion.div>
         <motion.div
@@ -129,20 +132,20 @@ export default function ProjectDetails() {
           viewport={{ once: true }}
         >
           <img
-            src={project.image}
-            alt={project.title}
+            src={project[0].image}
+            alt={project[0].title}
             className="rounded-lg shadow-lg w-full max-w-lg"
           />
         </motion.div>
-      </div>
+      </div>  */}
       {/* Features */}
       <div className="space-y-16">
-        {features.map((feature, index) => (
+        {project.map((feature, index) => (
           <div
             key={index}
             className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center"
           >
-            {index % 2 === 0 ? (
+            {index % 2 === 1 ? (
               <>
                 <motion.div
                   className="flex justify-center"
@@ -150,11 +153,12 @@ export default function ProjectDetails() {
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 1 }}
                   viewport={{ once: true }}
+                  whileHover={{scale: 1.05}}
                 >
                   <img
                     src={feature.image}
                     alt={feature.title}
-                    className="rounded-lg shadow-lg w-full max-w-lg"
+                    className="rounded-lg shadow-lg w-full max-w-lg "
                   />
                 </motion.div>
                 <motion.div
@@ -178,6 +182,7 @@ export default function ProjectDetails() {
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 1 }}
                   viewport={{ once: true }}
+                  
                 >
                   <h2 className="text-2xl font-bold text-gray-900">
                     {feature.title}
@@ -192,6 +197,7 @@ export default function ProjectDetails() {
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 1 }}
                   viewport={{ once: true }}
+                  whileHover={{scale: 1.05}}
                 >
                   <img
                     src={feature.image}
@@ -284,4 +290,6 @@ export default function ProjectDetails() {
       </div>
     </div>
   );
+
+  
 }
