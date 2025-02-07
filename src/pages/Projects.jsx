@@ -256,8 +256,8 @@ export default function ProjectDetails() {
           </motion.div>
 
           {/* Fade Effect at Ends */}
-          <div className="absolute top-0 bottom-0 left-0 w-20 bg-gradient-to-r from-white to-transparent"></div>
-          <div className="absolute top-0 bottom-0 right-0 w-20 bg-gradient-to-l from-white to-transparent"></div>
+          <div className="absolute top-0 bottom-0 left-0 w-20 bg-gradient-to-r from-gray-100 to-transparent"></div>
+          <div className="absolute top-0 bottom-0 right-0 w-20 bg-gradient-to-l from-gray-100 to-transparent"></div>
         </div>
       </div>
 
