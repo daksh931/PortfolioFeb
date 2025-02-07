@@ -1,38 +1,36 @@
 import { motion } from "framer-motion";
-import { useNavigate } from "react-router-dom"; 
+import { useNavigate } from "react-router-dom";
 import it from "../assets/img/design.png";
-import Navbar from "./Navbar";
 
 const projects = [
   {
     id: "recotech",
     name: "Recotech.co",
-    liveLink: "/projects/recotech",
+    // liveLink: "/projects/recotech",
     image: it,
   },
   {
     id: "music-school",
     name: "Music School",
-    liveLink: "/projects/music-school",
+    // liveLink: "/projects/music-school",
     image: it,
   },
   {
     id: "outfable",
     name: "OutFable",
-    liveLink: "/projects/outfable",
+    // liveLink: "/projects/outfable",
     image: it,
   },
   {
     id: "slabpro",
     name: "Slab Pro",
-    liveLink: "/projects/slabpro",
+    // liveLink: "/projects/slabpro",
     image: it,
   },
-];      
+];
 
 export default function OurWork() {
   return (
-   
     <div className="max-w-6xl mx-auto px-6 py-12">
       {/* Heading Section */}
       <div className="text-center mb-8">
@@ -44,26 +42,23 @@ export default function OurWork() {
 
       {/* Grid Section */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-        {projects.map((project, index) => (
-          <ProjectCard key={index} project={project} />
+        {projects.map((project) => (
+          <ProjectCard key={project.id} project={project} />
         ))}
       </div>
     </div>
-  
   );
 }
 
 function ProjectCard({ project }) {
-  const navigate = useNavigate(); 
+  const navigate = useNavigate();
 
   return (
-   
-   
     <motion.div
       whileHover={{ scale: 1.05, boxShadow: "0px 10px 25px rgba(0,0,0,0.15)" }}
       whileTap={{ scale: 0.98 }}
       className="relative cursor-pointer rounded-xl overflow-hidden border border-gray-300 shadow-lg transition duration-300 bg-white"
-      onClick={() => navigate(project.liveLink)} 
+      onClick={() => navigate(`/projects/${project.id}`)}
     >
       <img
         src={project.image}

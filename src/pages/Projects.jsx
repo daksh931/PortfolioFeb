@@ -12,31 +12,38 @@ import tech6 from "../assets/img/tech/tailwind.png";
 import { Pointer, PointerIcon } from "lucide-react";
 
 const projectData = {
-    recotech: {
-      title: "Recotech",
-      description: "This is the Recotech project description...",
-      image: design,
-    },
-    "music-school": {
-      title: "Music School",
-      description: "This is the Music School project description...",
-      image: design,
-    },
-    outfable: {
-      title: "OutFable",
-      description: "This is the OutFable project description...",
-      image: design,
-    },
-    slabpro: {
-      title: "Slab Pro",
-      description: "This is the Slab Pro project description...",
-      image: design,
-    },
-  };
-  
+  recotech: {
+    title: "Recotech",
+    description: "This is the Recotech project description...",
+    image: design,
+  },
+  "music-school": {
+    title: "Music School",
+    description: "This is the Music School project description...",
+    image: design,
+  },
+  outfable: {
+    title: "OutFable",
+    description: "This is the OutFable project description...",
+    image: design,
+  },
+  slabpro: {
+    title: "Slab Pro",
+    description: "This is the Slab Pro project description...",
+    image: design,
+  },
+};
 
 export default function ProjectDetails() {
+  
+    const { projectId } = useParams();
+    const project = projectData[projectId]; // Get project details from object
+  
+    if (!project) {
+      return <h1 className="text-3xl text-center mt-10">Project Not Found</h1>;
+    }
   const navigate = useNavigate();
+
   const features = [
     {
       title: "Feature 1",
@@ -86,13 +93,6 @@ export default function ProjectDetails() {
   const controls = useAnimation();
   const [paused, setPaused] = useState(false);
 
-  const { projectId } = useParams();
-  const project = projectData[projectId]; // Get project details from object
-
-  if (!project) {
-    return <h1 className="text-3xl text-center mt-10">Project Not Found</h1>;
-  }
-
   return (
     <div className="px-6 lg:px-24 py-16">
       {/* Breadcrumb Navigation */}
@@ -107,7 +107,7 @@ export default function ProjectDetails() {
       </div>
       {/* Project Title */}
       <h1 className="text-4xl font-bold text-gray-900">
-        Recotech (Romainian){" "}
+      {project.title}
       </h1>
       {/* Project Description & Image */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center my-12">
@@ -118,9 +118,7 @@ export default function ProjectDetails() {
           viewport={{ once: true }}
         >
           <p className="text-lg text-gray-700 leading-relaxed">
-            This project is an innovative solution that helps businesses grow
-            digitally. It includes powerful features such as real-time data
-            analytics, automated workflows, and seamless user experience.
+          {project.description}
           </p>
         </motion.div>
         <motion.div
@@ -131,8 +129,8 @@ export default function ProjectDetails() {
           viewport={{ once: true }}
         >
           <img
-            src={design}
-            alt="Project Preview"
+            src={project.image}
+            alt={project.title}
             className="rounded-lg shadow-lg w-full max-w-lg"
           />
         </motion.div>
@@ -241,8 +239,8 @@ export default function ProjectDetails() {
                     alt="Tech Logo"
                     className="opacity-70 w-24"
                     whileHover={{
-                      scale: 1.1, 
-                      cursor:Pointer,
+                      scale: 1.1,
+                      cursor: Pointer,
                       opacity: 1,
                     }}
                   />
