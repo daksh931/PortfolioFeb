@@ -1,30 +1,31 @@
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import it from "../assets/img/design.png";
+import recotech from '../assets/img/ProjectRecotech/Login.png';
+import MusicSchool from '../assets/img/ProjectMusicSchool/Home.png';
+import signoracucina from '../assets/img/ProjectSignoracucina/Home.png';
+
+
 
 const projects = [
   {
     id: "recotech",
     name: "Recotech.co",
-    // liveLink: "/projects/recotech",
-    image: it,
+    image: recotech,
   },
   {
     id: "music-school",
     name: "Music School",
-    // liveLink: "/projects/music-school",
-    image: it,
+    image: MusicSchool,
   },
   {
-    id: "outfable",
-    name: "OutFable",
-    // liveLink: "/projects/outfable",
-    image: it,
+    id: "signoracucina",
+    name: "signoracucina-az",
+    image: signoracucina,
   },
   {
     id: "slabpro",
     name: "Slab Pro",
-    // liveLink: "/projects/slabpro",
     image: it,
   },
 ];
@@ -63,7 +64,7 @@ function ProjectCard({ project }) {
       <img
         src={project.image}
         alt={project.name}
-        className="w-full h-48 object-cover rounded-t-xl"
+        className="w-full h-48 object-center  rounded-t-xl"
       />
       <div className="p-4">
         <h2 className="text-lg font-semibold text-gray-800">{project.name}</h2>

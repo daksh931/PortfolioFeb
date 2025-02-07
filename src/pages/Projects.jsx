@@ -9,23 +9,27 @@ import tech3 from "../assets/img/tech/java.png";
 import tech4 from "../assets/img/tech/jenkins.png";
 import tech5 from "../assets/img/tech/react.png";
 import tech6 from "../assets/img/tech/tailwind.png";
+import recotech from "../assets/img/ProjectRecotech/Login.png";
+import MusicSchool from "../assets/img/ProjectMusicSchool/Home.png";
+import signoracucina from "../assets/img/ProjectSignoracucina/Home.png";
 import { Pointer, PointerIcon } from "lucide-react";
 
 const projectData = {
   recotech: {
     title: "Recotech",
     description: "This is the Recotech project description...",
-    image: design,
+    image: recotech,
   },
   "music-school": {
     title: "Music School",
     description: "This is the Music School project description...",
-    image: design,
+    image: MusicSchool,
   },
-  outfable: {
-    title: "OutFable",
-    description: "This is the OutFable project description...",
-    image: design,
+  signoracucina: {
+    title: "Signora Cucina - A Premium Food Delivery Experience",
+    description:
+      "Signora Cucina is a modern and seamless food delivery application designed to bring delicious meals straight to your doorstep. Developed by our team using React.js, Node.js, and other cutting-edge technologies, this platform ensures a smooth and intuitive user experience.With a focus on efficiency",
+    image: signoracucina,
   },
   slabpro: {
     title: "Slab Pro",
@@ -35,32 +39,30 @@ const projectData = {
 };
 
 export default function ProjectDetails() {
-  
-    const { projectId } = useParams();
-    const project = projectData[projectId]; // Get project details from object
-  
-    if (!project) {
-      return <h1 className="text-3xl text-center mt-10">Project Not Found</h1>;
-    }
+  const { projectId } = useParams();
+  const project = projectData[projectId]; // Get project details from object
+
+  if (!project) {
+    return <h1 className="text-3xl text-center mt-10">Project Not Found</h1>;
+  }
   const navigate = useNavigate();
 
   const features = [
     {
-      title: "Feature 1",
+      title: "User-Friendly Interface ",
       description:
-        "This feature allows users to manage tasks efficiently, track progress, and collaborate seamlessly.",
+        "A responsive and visually appealing UI for a hassle-free experience.Built with scalability and performance in mind, Signora Cucina is a perfect blend of technology and culinary delight. 🍽️🚀 Browse menus, customize dishes, and place orders effortlessly.",
       image: design,
     },
     {
-      title: "Feature 2",
+      title: "Secure Payments",
       description:
         "Advanced security features ensure that your data is protected at all times.",
       image: design,
     },
     {
-      title: "Feature 3",
-      description:
-        "Seamless integration with multiple platforms for enhanced productivity.",
+      title: "Real-time Tracking",
+      description: "Keep an eye on your order status in real time.",
       image: design,
     },
   ];
@@ -106,9 +108,7 @@ export default function ProjectDetails() {
         // <span className="text-gray-700 font-semibold">Our Work</span>
       </div>
       {/* Project Title */}
-      <h1 className="text-4xl font-bold text-gray-900">
-      {project.title}
-      </h1>
+      <h1 className="text-4xl font-bold text-gray-900">{project.title}</h1>
       {/* Project Description & Image */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center my-12">
         <motion.div
@@ -118,7 +118,7 @@ export default function ProjectDetails() {
           viewport={{ once: true }}
         >
           <p className="text-lg text-gray-700 leading-relaxed">
-          {project.description}
+            {project.description}
           </p>
         </motion.div>
         <motion.div
