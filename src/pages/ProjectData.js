@@ -90,31 +90,31 @@ const projectData = {
     {
         title: "Feature 1",
         description:
-            "This feature allows users to manage tasks efficiently, track progress, and collaborate seamlessly.",
+            "Signora Cucina features robust multi-language support, ensuring that users who speak only their native language can navigate the platform effortlessly. Implemented using React i18next, this functionality provides seamless localization and enhances accessibility for a diverse user base.",
         image: sig_image1,
     },
     {
         title: "Feature 2",
         description:
-            "Advanced security features ensure that your data is protected at all times.",
+            "App features a simplified user interface where best-selling items are prominently displayed on the homepage. This allows users to quickly browse and select popular dishes without navigating through the entire menu. The best-selling section includes high-quality images, prices, and quick add-to-cart options, enhancing user convenience and boosting sales. This feature ensures that users can effortlessly explore top-rated meals, making their food ordering experience smooth and enjoyable.",
         image: sig_image2,
     },
     {
         title: "Feature 3",
         description:
-            "Seamless integration with multiple platforms for enhanced productivity.",
+            "The Signora Cucina application includes a user-friendly contact and feedback section, allowing customers to easily get in touch with the restaurant. The interface offers a clean layout with fields for name, email, and message submission. A clear privacy assurance is also provided, ensuring that users' personal information is kept safe. This feature enhances customer interaction and support, making it convenient for users to share their feedback, ask questions, or make special requests directly through the app.",
         image: sig_image3,
     },
     {
         title: "Feature 4",
         description:
-            "Advanced security features ensure that your data is protected at all times.",
+            "implements a seamless, stateless 'Add to Cart' functionality. Users can effortlessly add items to their cart, view the cart contents in real-time, and proceed to checkout without any page reloads, enhancing the user experience significantly. This feature ensures that customers can quickly browse popular dishes, add them to their cart, and move towards payment smoothly, making the ordering process intuitive and efficient.",
         image: sig_image4,
     },
     {
         title: "Feature 5",
         description:
-            "Seamless integration with multiple platforms for enhanced productivity.",
+            "We integrated a secure login and signup system, including authentication options via Google and other social platforms. This ensures quick and hassle-free access for users, enhancing the overall usability and convenience of the application.",
         image: sig_image5,
     },
     ],
