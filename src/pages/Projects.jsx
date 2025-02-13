@@ -287,6 +287,9 @@ export default function ProjectDetails() {
             </motion.div>
           ))}
         </div>
+
+          
+
       </div>
     </div>
   );
