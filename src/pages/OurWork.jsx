@@ -35,9 +35,9 @@ export default function OurWork() {
     <div className="max-w-6xl mx-auto px-6 py-12">
       {/* Heading Section */}
       <div className="text-center mb-8">
-        <h2 className="text-orange-500 font-semibold text-4xl">Projects</h2>
-        <h1 className="text-2xl font-bold hover:text-blue-900 text-gray-700 mt-2">
-          Projects Handled Carefully and <br/> submitted to Clients successfully.
+        <h2 className="text-4xl font-bold text-center">Projects</h2>
+        <h1 className="text-2xl font-bold mt-4 ">
+          Projects Handled Carefully and  submitted to <br/>Clients successfully.
         </h1>
       </div>
 
