@@ -14,6 +14,8 @@ function App() {
   const scrollYProgress = useScroll().scrollYProgress;
   return (
     <>
+   
+
       <Navbar />
       <motion.div
         className="bg-orange-500/60 h-1 sticky top-17 z-10 origin-left rounded-xl"
@@ -29,6 +31,7 @@ function App() {
         <Route path="/contact" element={<ContactUs />} />
       </Routes>
       <Footer/>
+   
     </>
   );
 }
