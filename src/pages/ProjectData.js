@@ -24,37 +24,37 @@ const projectData = {
         image: recotech,
     },
     {
-        title: "Feature 1",
+        title: "Role-Based Project Dashboard",
         description:
             "Recotech features a Project Dashboard with role-based access control, ensuring that only authorized users can interact with project data. While some roles have full access to add, edit, or delete projects, others are restricted to view-only mode. Additionally, access to project details varies—certain users can see comprehensive project insights, while others have limited visibility. Clicking on a project in the dashboard redirects users to a detailed view, displaying team members involved, project progress, and financial aspects like expenses, providing a structured and efficient project management experience.",
         image: image1,
     },
     {
-        title: "Feature 2",
+        title: "Secure Statement Tracking",
         description:
             "Recotech also includes a Statement Page, accessible only to specific roles based on permissions. This feature allows users to track statements, including assigned operators, deadlines, and completion status. Some roles have the ability to modify or delete statements, while others are limited to view-only access. This ensures controlled management of critical data, enabling seamless tracking of deadlines and task responsibilities while maintaining role-based security and operational efficiency.",
         image: image2,
     },
     {
-        title: "Feature 3",
+        title: "User Management System",
         description:
             "Recotech also provides a User Management System, where only authorized roles, such as Super Admin, can create and manage users. While adding a new user, details like assigned projects, email, and role (e.g., Operator, Reception, Storage, etc.) are specified. Some roles can modify or remove users, while others have view-only access. This structured approach ensures that user assignments and roles are managed efficiently, maintaining a clear hierarchy and controlled access within the system.",
         image: image3,
     },
     {
-        title: "Feature 4",
+        title: "Parts Management & Inventory",
         description:
             "Recotech also features a Parts Management System, where users with the appropriate roles can view, manage, and order spare parts for repairs and maintenance. The Parts Page displays essential details such as Part Code, Name, Quantity, Brand/Model, Fuel Type, Power (KW), Engine Code, Chassis, and Location (e.g., Warehouse). Based on availability, parts can be ordered and used for servicing and repairs, ensuring smooth inventory tracking and efficient resource management.",
         image: image4,
     },
     {
-        title: "Feature 5",
+        title: "Document Management & Organization",
         description:
             "Recotech also features a Document Management System, allowing users to upload, manage, and organize documents based on specific projects and clients. Users with the appropriate permissions can select templates, associate documents with projects, and assign them to clients. Some roles have the ability to modify or delete documents, while others are limited to view-only access. This ensures secure and efficient document storage, making it easier to track and manage important files within the platform.",
         image: image5,
     },
     {
-        title: "Feature 6",
+        title: "Signup/Login Auth",
         description:
             "In Recotech, login and authentication are handled efficiently on the frontend, ensuring a smooth and secure user experience. The system dynamically verifies user credentials and restricts access based on role-based permissions. The UI adapts in real-time, showing only the relevant sections and functionalities for each user. Unauthorized users are automatically redirected, enhancing security and usability while maintaining a seamless workflow across different roles.",
         image: image6,
@@ -88,44 +88,83 @@ const projectData = {
         image: signoracucina,
     },
     {
-        title: "Feature 1",
+        title: "Seamless Multi-Language Support",
         description:
             "Signora Cucina features robust multi-language support, ensuring that users who speak only their native language can navigate the platform effortlessly. Implemented using React i18next, this functionality provides seamless localization and enhances accessibility for a diverse user base.",
         image: sig_image1,
     },
     {
-        title: "Feature 2",
+        title: "Best-Selling Items Showcase",
         description:
             "App features a simplified user interface where best-selling items are prominently displayed on the homepage. This allows users to quickly browse and select popular dishes without navigating through the entire menu. The best-selling section includes high-quality images, prices, and quick add-to-cart options, enhancing user convenience and boosting sales. This feature ensures that users can effortlessly explore top-rated meals, making their food ordering experience smooth and enjoyable.",
         image: sig_image2,
     },
     {
-        title: "Feature 3",
+        title: "User-Friendly Contact & Feedback System",
         description:
             "The Signora Cucina application includes a user-friendly contact and feedback section, allowing customers to easily get in touch with the restaurant. The interface offers a clean layout with fields for name, email, and message submission. A clear privacy assurance is also provided, ensuring that users' personal information is kept safe. This feature enhances customer interaction and support, making it convenient for users to share their feedback, ask questions, or make special requests directly through the app.",
         image: sig_image3,
     },
     {
-        title: "Feature 4",
+        title: "Effortless Add-to-Cart & Checkout",
         description:
             "implements a seamless, stateless 'Add to Cart' functionality. Users can effortlessly add items to their cart, view the cart contents in real-time, and proceed to checkout without any page reloads, enhancing the user experience significantly. This feature ensures that customers can quickly browse popular dishes, add them to their cart, and move towards payment smoothly, making the ordering process intuitive and efficient.",
         image: sig_image4,
     },
     {
-        title: "Feature 5",
+        title: "Secure Authentication & Social Login",
         description:
             "We integrated a secure login and signup system, including authentication options via Google and other social platforms. This ensures quick and hassle-free access for users, enhancing the overall usability and convenience of the application.",
         image: sig_image5,
     },
     ],
 
-    "music-school": [{
+
+
+    // vision classes 
+    visionClasses :[
+        {
+            "title": "Vision Classes - Empowering Students for a Brighter Future",
+            "description": "Vision Classes is a comprehensive online learning platform designed to help students excel in School Education, Engineering (B.Tech), and Government Job Preparation. With a user-friendly interface and advanced technology stack, Vision Classes ensures a seamless and effective learning experience.",
+            "image": image1
+        },
+        {
+            "title": "Secure Authentication & Role-Based Access",
+            "description": "Vision Classes offers a secure login and signup system, allowing users to register natively using Express and React or through Auth0 with Google, GitHub, and other social authentication providers. This ensures a flexible and hassle-free login experience.",
+            "image": image1
+        },
+        {
+            "title": "Seamless Redux Integration for State Management",
+            "description": "The platform is built with seamless Redux integration, ensuring efficient state management across different components. This enables smooth navigation, real-time updates, and enhanced performance, providing users with a seamless experience.",
+            "image": image1
+        },
+        {
+            "title": "Effortless Add-to-Cart & Checkout",
+            "description": "Users can easily browse through available courses, add them to their cart, and proceed to checkout without any page reloads. The intuitive interface ensures a hassle-free experience while selecting and purchasing courses.",
+            "image": image1
+        },
+        {
+            "title": "Admin Dashboard for Course Management",
+            "description": "Vision Classes provides an admin dashboard where authorized users can post, delete, and update courses. This ensures efficient course management, keeping the content up-to-date and relevant for students.",
+            "image": image1
+        },
+        {
+            "title": "Browse & Purchase Courses with Ease",
+            "description": "Students can explore a wide range of courses tailored to their needs, view course details, and purchase them effortlessly. The platform ensures a structured learning experience with easy accessibility to all available courses.",
+            "image": image1
+        }
+    ],
+    
+
+
+    musicschool: [{
         title: "Music School",
         description: "This is the Music School project description...",
         image: MusicSchool,
     },
     ],
 
+    
     slabpro: [{
         title: "Slab Pro",
         description: "This is the Slab Pro project description...",

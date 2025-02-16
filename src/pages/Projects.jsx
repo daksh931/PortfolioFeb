@@ -139,11 +139,11 @@ export default function ProjectDetails() {
         </motion.div>
       </div>  */}
       {/* Features */}
-      <div className="space-y-16">
+      <div className="space-y-28 sm:px-5 sm:space-x-10">
         {project.map((feature, index) => (
           <div
             key={index}
-            className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center"
+            className="grid grid-cols-1 font-sans items-start lg:grid-cols-2 gap-8 border-b-[1px] border-orange-500 pb-10"
           >
             {index % 2 === 1 ? (
               <>
@@ -167,7 +167,7 @@ export default function ProjectDetails() {
                   transition={{ duration: 1 }}
                   viewport={{ once: true }}
                 >
-                  <h2 className="text-2xl font-bold text-gray-900">
+                  <h2 className="text-2xl font-bold  mb-7  text-gray-900">
                     {feature.title}
                   </h2>
                   <p className="text-lg text-gray-700 mt-2">
@@ -177,14 +177,15 @@ export default function ProjectDetails() {
               </>
             ) : (
               <>
-                <motion.div
+                <motion.div 
+                
                   initial={{ opacity: 0, x: -100 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 1 }}
                   viewport={{ once: true }}
                   
                 >
-                  <h2 className="text-2xl font-bold text-gray-900">
+                  <h2 className="text-2xl mb-7 font-bold text-gray-900">
                     {feature.title}
                   </h2>
                   <p className="text-lg text-gray-700 mt-2">
