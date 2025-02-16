@@ -1,4 +1,3 @@
-"use client";
 import React, { useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { motion, useAnimation } from "framer-motion";
@@ -12,6 +11,7 @@ import tech6 from "../assets/img/tech/tailwind.png";
 
 import { Pointer, PointerIcon } from "lucide-react";
 import projectData from "./ProjectData";
+import ScrollingComponent from "./Components/ScrollTab";
 
 // const projectData = {
 //   recotech: {
@@ -218,7 +218,7 @@ export default function ProjectDetails() {
         </h2>
 
         <div className="relative flex items-center w-full">
-          <motion.div
+          {/* <motion.div
             className="flex space-x-12 min-w-max"
             animate={controls}
             initial={{ x: "0%" }}
@@ -253,7 +253,8 @@ export default function ProjectDetails() {
                 ))}
               </React.Fragment>
             ))}
-          </motion.div>
+          </motion.div> */}
+          <ScrollingComponent/>
 
           {/* Fade Effect at Ends */}
           <div className="absolute top-0 bottom-0 left-0 w-20 bg-gradient-to-r from-gray-100 to-transparent"></div>
@@ -287,9 +288,6 @@ export default function ProjectDetails() {
             </motion.div>
           ))}
         </div>
-
-          
-
       </div>
     </div>
   );
