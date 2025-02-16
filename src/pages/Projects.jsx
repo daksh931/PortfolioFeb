@@ -8,8 +8,6 @@ import tech3 from "../assets/img/tech/java.png";
 import tech4 from "../assets/img/tech/jenkins.png";
 import tech5 from "../assets/img/tech/react.png";
 import tech6 from "../assets/img/tech/tailwind.png";
-
-import { Pointer, PointerIcon } from "lucide-react";
 import projectData from "./ProjectData";
 import ScrollingComponent from "./Components/ScrollTab";
 

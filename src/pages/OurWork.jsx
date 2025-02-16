@@ -1,11 +1,9 @@
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import it from "../assets/img/design.png";
-import recotech from '../assets/img/ProjectRecotech/Login.png';
-import MusicSchool from '../assets/img/ProjectMusicSchool/Home.png';
-import signoracucina from '../assets/img/ProjectSignoracucina/Home.png';
-
-
+import recotech from "../assets/img/ProjectRecotech/Login.png";
+import MusicSchool from "../assets/img/ProjectMusicSchool/Home.png";
+import signoracucina from "../assets/img/ProjectSignoracucina/Home.png";
 
 const projects = [
   {
@@ -23,11 +21,7 @@ const projects = [
     name: "signoracucina-az",
     image: signoracucina,
   },
-  {
-    id: "slabpro",
-    name: "Slab Pro",
-    image: it,
-  },
+
   {
     id: "visionClasses",
     name: "vision Classes",
@@ -42,7 +36,8 @@ export default function OurWork() {
       <div className="text-center mb-8">
         <h2 className="text-4xl font-bold text-center">Projects</h2>
         <h1 className="text-2xl font-bold mt-4 ">
-          Projects Handled Carefully and  submitted to <br/>Clients successfully.
+          Projects Handled Carefully and submitted to <br />
+          Clients successfully.
         </h1>
       </div>
 
@@ -61,23 +56,46 @@ function ProjectCard({ project }) {
 
   return (
     <div className="space-y-3.5 mt-5">
+      <motion.div
+        whileHover={{
+          scale: 1.03,
+          rotate: 4,
+          boxShadow: "0px 20px 40px rgba(0, 0, 0, 0.3)",    
+        }}
+        whileTap={{ scale: 0.98 }}
+        className="relative cursor-pointer rounded-3xl overflow-hidden bg-white/80 backdrop-blur-lg border border-gray-200 shadow-xl transition-transform duration-500"
+        onClick={() => navigate(`/projects/${project.id}`)}
+      >
+        {/* Project Image */}
+        <div className="relative group">
+          <img
+            src={project.image}
+            alt={project.name}
+            className="w-full h-56 object-cover rounded-t-3xl transition-transform duration-500 group-hover:scale-105"
+          />
 
-    <motion.div
-      whileHover={{ scale: 1.02, boxShadow: "0px 10px 25px rgba(0,0,0,0.15)" }}
-      whileTap={{ scale: 0.98 }}
-      className="relative cursor-pointer rounded-xl  overflow-hidden border border-gray-300 shadow-lg transition duration-300 bg-white"
-      onClick={() => navigate(`/projects/${project.id}`)}
-    >
-      <img
-        src={project.image}
-        alt={project.name}
-        className="w-full h-48 object-center  rounded-t-xl"
-      />
-      <div className="p-4">
-        <h2 className="text-lg font-semibold text-gray-800">{project.name}</h2>
-      </div>
-    </motion.div>
+          {/* Gradient Overlay */}
+          <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent group-hover:from-black/30 transition-all duration-500"></div>
+
+          {/* Floating Action Button */}
+          <button className="absolute bottom-4 right-4 bg-orange-500 hover:bg-orange-600 text-white p-3 rounded-full shadow-lg transition-transform duration-300 hover:scale-110">
+            Explore →
+          </button>
+        </div>
+
+        {/* Project Details */}
+        <div className="p-6 space-y-3">
+          <h2 className="text-2xl font-extrabold text-gray-900">
+            {project.name}
+          </h2>
+          <p className="text-sm text-gray-600">
+            Dive deeper into the project and discover its unique features.
+          </p>
+
+          {/* Glowing Border */}
+          <div className="absolute inset-0 rounded-3xl border-2 border-transparent group-hover:border-orange-400 transition-all duration-500"></div>
+        </div>
+      </motion.div>
     </div>
-
   );
 }
