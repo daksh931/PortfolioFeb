@@ -114,12 +114,12 @@ const [theme, setTheme] = useState(() => {
                   ))}
                 </nav>
 
-                <button
+                {/* <button
                   onClick={toggleTheme}
                   className="p-2 rounded-full bg-gray-200 dark:bg-gray-800 text-gray-800 dark:text-white hover:bg-gray-300 dark:hover:bg-gray-700 transition"
                 >
                   {theme === "light" ? <Moon size={20} /> : <Sun size={20} />}
-                </button>
+                </button> */}
               </div>
             </div>
           </div>
