@@ -28,6 +28,11 @@ const projects = [
     name: "Slab Pro",
     image: it,
   },
+  {
+    id: "visionClasses",
+    name: "vision Classes",
+    image: it,
+  },
 ];
 
 export default function OurWork() {
