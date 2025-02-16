@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { Menu, X, Home, Info, Briefcase, Layers, Mail } from "lucide-react";
+import { Home, Info, Briefcase, Layers, Mail, Moon, Sun } from "lucide-react";
 import Logo from "../assets/Logo.png";
-import { Moon, Sun } from "lucide-react";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+
   const navLinks = [
     { path: "/", label: "Home", icon: <Home /> },
     { path: "/about", label: "About Us", icon: <Info /> },
@@ -13,16 +13,14 @@ export default function Navbar() {
     { path: "/work", label: "Our Work", icon: <Layers /> },
     { path: "/contact", label: "Contact Us", icon: <Mail /> },
   ];
-   
-// theme 
-const [theme, setTheme] = useState(() => {
-    // Get stored theme from localStorage or default to 'light'
+
+  // Theme toggle logic
+  const [theme, setTheme] = useState(() => {
     return typeof window !== "undefined" && localStorage.getItem("theme") === "dark"
       ? "dark"
       : "light";
   });
 
-  // Toggle theme and update localStorage
   const toggleTheme = () => {
     const newTheme = theme === "light" ? "dark" : "light";
     setTheme(newTheme);
@@ -32,7 +30,6 @@ const [theme, setTheme] = useState(() => {
     }
   };
 
-  // Apply theme on mount
   useEffect(() => {
     if (typeof window !== "undefined") {
       document.documentElement.classList.toggle("dark", theme === "dark");
@@ -40,156 +37,75 @@ const [theme, setTheme] = useState(() => {
   }, [theme]);
 
   return (
-    <div className="sticky  top-0 z-10">
-      <div className="shadow-lg hover:shadow-xl z-10 border-slate-300 border-b-[1px]  bg-white/5 backdrop-blur-lg">
-        <div className=" w-full mx-0.5 px-6 py-1 sm:flex justify-between  ">
-          <div className=" px-0 py-3 flex justify-between align-middle self-center ">
-            <div className="">
-              <Link
-                to="/"
-                className="text-3xl font-bold hover:text-gray-600 text-orange-500"
-              >
-                {/* <img src={Logo} alt="XTech" className="max-w-25 -p-2 rounded-3xl" /> */}
-                XTech
-              </Link>
-            </div>
-
-            <div className="sm:hidden flex items-center ">
-              <button
-                onClick={() => setIsOpen(!isOpen)}
-                className="text-gray-800 focus:outline-none "
-              >
-                {isOpen ? <X size={28} /> : <Menu size={28} />}
-              </button>
-            </div>
+    <div className="sticky top-0 z-10">
+      <div className="shadow-lg hover:shadow-xl border-slate-300 border-b-[1px] bg-white/5 backdrop-blur-lg">
+        <div className="w-full mx-0.5 px-6 py-3 flex justify-between items-center">
+          <div className="flex items-center">
+            <Link to="/" className="text-3xl font-bold text-orange-500">
+              XTech
+            </Link>
           </div>
 
-          <div className="flex items-center ">
-            <div className="hidden sm:block">
-              <div className="sm:flex  flex-col sm:flex-row sm:space-x-6 space-y-4 sm:space-y-0 hidden whitespace-nowrap  ">
-                <nav className="flex space-x-4">
-                  {navLinks.map((link, index) => (
-                    // <Link
-                    //     key={index}
-                    //     to={link.path}
-                    //     className="flex text-lg items-center relative group p-2 text-gray-900"
-                    // >
-                    //     <span className="mr-2 z-10">{link.icon}</span>
-
-                    //     {/* Wrapper for text and background */}
-                    //     <span className="relative z-10 overflow-hidden py-1 px-2 rounded-sm">
-                    //         {/* Background color (placed behind text) */}
-                    //         <span className="absolute bottom-0 left-0 w-full h-full bg-orange-500 scale-y-0 group-hover:scale-y-100 transform origin-bottom transition-transform duration-300 z-0"></span>
-
-                    //         {/* Text */}
-                    //         <span className="relative z-10 group-hover:text-black">
-                    //             {link.label}
-                    //         </span>
-                    //     </span>
-                    // </Link>
-                    <Link
-                      key={index}
-                      to={link.path}
-                      className="flex text-lg items-center relative group p-2 text-gray-900"
-                    >
-                      <span className="mr-2 z-10">{link.icon}</span>
-
-                      {/* Wrapper for text and background */}
-                      <span className="relative z-10 overflow-hidden py-1 px-2 rounded-sm">
-                        {/* Slanted Background (Top-Only) */}
-                        <span
-                          className="absolute top-0 left-0 w-full h-full bg-orange-400 transform scale-y-0 group-hover:scale-y-100 transition-transform duration-300 origin-top z-0"
-                          style={{
-                            clipPath:
-                              "polygon(0 0, 100% 10%, 100% 100%, 3% 100%)",
-                          }}
-                        ></span>
-
-                        {/* Text */}
-                        <span className="relative z-10 group-hover:text-white transition-colors duration-300">
-                          {link.label}
-                        </span>
-                      </span>
-                    </Link>
-                  ))}
-                </nav>
-
-                {/* <button
-                  onClick={toggleTheme}
-                  className="p-2 rounded-full bg-gray-200 dark:bg-gray-800 text-gray-800 dark:text-white hover:bg-gray-300 dark:hover:bg-gray-700 transition"
-                >
-                  {theme === "light" ? <Moon size={20} /> : <Sun size={20} />}
-                </button> */}
-              </div>
-            </div>
+          {/* Toggle Button for Mobile Menu */}
+          <div className="sm:hidden flex items-center">
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="relative w-10 h-10 flex flex-col justify-between items-center p-2"
+            >
+              <div
+                className={`w-8 h-[3px] bg-gray-800 rounded transition-transform duration-300 ${
+                  isOpen ? "rotate-45 translate-y-2" : ""
+                }`}
+              ></div>
+              <div
+                className={`w-8 h-[3px] bg-gray-800 rounded transition-opacity duration-300 ${
+                  isOpen ? "opacity-0" : ""
+                }`}
+              ></div>
+              <div
+                className={`w-8 h-[3px] bg-gray-800 rounded transition-transform duration-300 ${
+                  isOpen ? "-rotate-45 -translate-y-3" : ""
+                }`}
+              ></div>
+            </button>
           </div>
 
-          {/* Mobile side ------------------------------>>>> */}
-          {/* <div className={`absolute top-16 left-0 w-full bg-white shadow-sm transition-transform transform 
-                    ${isOpen ? "translate-y-0" : "-translate-y-full"} sm:hidden`}> */}
-          <div
-            className={`${
-              isOpen ? "block" : "hidden"
-            } flex sm:hidden items-center`}
-          >
-            <div className="flex flex-col justify-between h-full p-6 space-y-4">
+          {/* Desktop Navigation */}
+          <div className="hidden sm:flex space-x-6">
+            {navLinks.map((link, index) => (
               <Link
-                to="/"
-                className="flex justify-between items-center text-gray-700 hover:text-gray-900 text-lg w-full"
+                key={index}
+                to={link.path}
+                className="text-lg flex items-center space-x-2 text-gray-900 group p-2 relative"
               >
-                <span className="flex items-center space-x-3">
-                  <span className="flex items-center justify-center w-6 h-6">
-                    <Home />
-                  </span>
-                  <span>Home</span>
+                <span className="mr-2">{link.icon}</span>
+                <span className="relative">
+                  <span className="absolute bottom-0 left-0 w-full h-[2px] bg-orange-500 scale-x-0 group-hover:scale-x-100 transform transition-transform duration-300"></span>
+                  {link.label}
                 </span>
               </Link>
-              <Link
-                to="/about"
-                className="flex justify-between items-center text-gray-700 hover:text-gray-900 text-lg w-full"
-              >
-                <span className="flex items-center space-x-3">
-                  <span className="flex items-center justify-center w-6 h-6">
-                    <Info />
-                  </span>
-                  <span>About Us</span>
-                </span>
-              </Link>
-              <Link
-                to="/services"
-                className="flex justify-between items-center text-gray-700 hover:text-gray-900 text-lg w-full"
-              >
-                <span className="flex items-center space-x-3">
-                  <span className="flex items-center justify-center w-6 h-6">
-                    <Briefcase />
-                  </span>
-                  <span>Our Services</span>
-                </span>
-              </Link>
-              <Link
-                to="/work"
-                className="flex justify-between items-center text-gray-700 hover:text-gray-900 text-lg w-full"
-              >
-                <span className="flex items-center space-x-3">
-                  <span className="flex items-center justify-center w-6 h-6">
-                    <Layers />
-                  </span>
-                  <span>Our Work</span>
-                </span>
-              </Link>
-              <Link
-                to="/contact"
-                className="flex justify-between items-center text-gray-700 hover:text-gray-900 text-lg w-full"
-              >
-                <span className="flex items-center space-x-3">
-                  <span className="flex items-center justify-center w-6 h-6">
-                    <Mail />
-                  </span>
-                  <span>Contact Us</span>
-                </span>
-              </Link>
-            </div>
+            ))}
           </div>
+
+          {/* Mobile Menu */}
+          {isOpen && (
+            <div className="absolute top-16 left-0 w-full bg-white shadow-md sm:hidden transition-transform">
+              <nav className="flex flex-col space-y-4 p-6">
+                {navLinks.map((link, index) => (
+                  <Link
+                    key={index}
+                    to={link.path}
+                    className="flex items-center space-x-3 text-gray-700 hover:text-gray-900 text-lg"
+                  >
+                    <span className="w-6 h-6 flex items-center justify-center">
+                      {link.icon}
+                    </span>
+                    <span>{link.label}</span>
+                  </Link>
+                ))}
+              </nav>
+            </div>
+          )}
         </div>
       </div>
     </div>
