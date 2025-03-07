@@ -12,9 +12,9 @@ const AboutSection = () => {
     <section className="bg-white py-16 px-8">
       <motion.div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
         <div>
-          <h2 className="text-orange-500 font-semibold">About Us</h2>
+          <h2 className="text-red-700 font-semibold">About Us</h2>
           <h1 className="text-4xl font-bold text-gray-900 mt-2">
-            Why should you hire Techiee for your digital solutions?
+            Why should you hire Delt solutions for your digital solutions?
           </h1>
           <div className="mt-6 space-y-6">
             {features.map((feature, index) => (
@@ -53,12 +53,12 @@ const features = [
   {
     title: "Get Complete solutions under one roof",
     description:
-      "Techiee helps you to provide complete solutions under one roof like Website Development, Hybrid App, SEO, Graphic design, IT Consultancy.",
+      "Delt solutions helps you to provide complete solutions under one roof like Website Development, Hybrid App, SEO, Graphic design, IT Consultancy.",
   },
   {
     title: "Provides Quality Work",
     description:
-      "Techiee helps you to Our experienced team’s main goal is to provide you the Quality Work in less time.",
+      "Delt solutions helps you to Our experienced team’s main goal is to provide you the Quality Work in less time.",
   },
   {
     title: "Experienced Team",
@@ -68,7 +68,7 @@ const features = [
   {
     title: "Market competitive rates",
     description:
-      "Techiee offers affordable customized packages that cater to your needs.",
+      "Delt solutions offers affordable customized packages that cater to your needs.",
   },
 ];
 

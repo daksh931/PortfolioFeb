@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaFacebook, FaTwitter, FaLinkedin, FaInstagram } from 'react-icons/fa'; // Importing social media icons
+import { Link } from 'react-router-dom';
 
 function Footer() {
   return (
@@ -8,8 +9,11 @@ function Footer() {
       
         {/* First Section - Company Logo and Description */}
         <div>
-          <img src="/path-to-your-logo.png" alt="Company Logo" className="h-12 mb-4" />
-          <p className="text-sm ">We provide innovative solutions to help businesses grow and thrive in the digital age.</p>
+        <div className="flex items-center pb-4">
+            <Link to="/" className="text-2xl  ">
+             <span className="text-red-700 font-bold">DELT</span>  solutions 
+            </Link>
+          </div>          <p className="text-sm ">We provide innovative solutions to help businesses grow and thrive in the digital age.</p>
         </div>
 
         {/* Second Section - Contact Us */}
@@ -23,10 +27,10 @@ function Footer() {
         <div>
           <h3 className="text-lg font-semibold mb-4">Useful Links</h3>
           <ul className="space-y-2">
-            <li><a href="#about" className="text-sm  hover:text-orange-500 transition-colors">About Us</a></li>
-            <li><a href="#our-work" className="text-sm  hover:text-orange-500 transition-colors">Our Work</a></li>
-            <li><a href="#our-services" className="text-sm  hover:text-orange-500 transition-colors">Our Services</a></li>
-            <li><a href="#contact-us" className="text-sm  hover:text-orange-500 transition-colors">Contact Us</a></li>
+            <li><a href="#about" className="text-sm  hover:text-red-700 transition-colors">About Us</a></li>
+            <li><a href="#our-work" className="text-sm  hover:text-red-700 transition-colors">Our Work</a></li>
+            <li><a href="#our-services" className="text-sm  hover:text-red-700 transition-colors">Our Services</a></li>
+            <li><a href="#contact-us" className="text-sm  hover:text-red-700 transition-colors">Contact Us</a></li>
           </ul>
         </div>
 
@@ -51,7 +55,7 @@ function Footer() {
       </div>
 
       <div className="mt-8 border-t border-gray-700 pt-6 text-center">
-        <p className="text-sm text-gray-400">Copyright © {new Date().getFullYear()} All Rights Reserved By Techiee</p>
+        <p className="text-sm text-gray-400">Copyright © {new Date().getFullYear()} All Rights Reserved By Delt solutions</p>
       </div>
     </div>
   );

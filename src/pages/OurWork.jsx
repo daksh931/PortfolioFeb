@@ -78,7 +78,7 @@ function ProjectCard({ project }) {
           <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent group-hover:from-black/30 transition-all duration-500"></div>
 
           {/* Floating Action Button */}
-          <button className="absolute bottom-4 right-4 bg-orange-500 hover:bg-orange-600 text-white p-3 rounded-full shadow-lg transition-transform duration-300 hover:scale-110">
+          <button className="absolute bottom-4 right-4 bg-red-700 hover:bg-orange-600 text-white p-3 rounded-full shadow-lg transition-transform duration-300 hover:scale-110">
             Explore →
           </button>
         </div>

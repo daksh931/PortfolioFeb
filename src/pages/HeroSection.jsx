@@ -61,7 +61,7 @@ function HeroSection() {
         <p className="text-lg text-center sm:text-xl text-gray-700 mb-4">{contentData[index].description}</p>
         <a
           href="#explore"
-          className="px-6 py-3 bg-orange-500 text-white text-lg font-semibold rounded-lg shadow-lg hover:bg-orange-600 transition duration-300"
+          className="px-6 py-3 bg-red-700 text-white text-lg font-semibold rounded-lg shadow-lg hover:bg-orange-600 transition duration-300"
         >
           Explore Now
         </a>

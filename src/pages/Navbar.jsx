@@ -41,8 +41,8 @@ export default function Navbar() {
         <div className="w-full px-6 py-3 flex justify-between items-center">
           {/* Logo */}
           <div className="flex items-center">
-            <Link to="/" className="text-3xl font-bold text-orange-500">
-              XTech
+            <Link to="/" className="text-2xl  ">
+             <span className="text-red-700 font-bold">DELT</span>  solutions 
             </Link>
           </div>
 
@@ -56,7 +56,7 @@ export default function Navbar() {
               >
                 <span className="mr-2">{link.icon}</span>
                 <span className="relative">
-                  <span className="absolute bottom-0 left-0 w-full h-[2px] bg-orange-500 scale-x-0 group-hover:scale-x-100 transform transition-transform duration-300"></span>
+                  <span className="absolute bottom-0 left-0 w-full h-[2px] bg-red-700 scale-x-0 group-hover:scale-x-100 transform transition-transform duration-300"></span>
                   {link.label}
                 </span>
               </Link>

@@ -59,7 +59,7 @@ const ServiceCard = ({ image, title, description }) => (
       <p className="text-gray-600 mb-4">{description}</p>
       <a
         href="#"
-        className="underline border-b-2 border-transparent hover:text-orange-500 transition-all"
+        className="underline border-b-2 border-transparent hover:text-red-700 transition-all"
       >
         Read More
       </a>

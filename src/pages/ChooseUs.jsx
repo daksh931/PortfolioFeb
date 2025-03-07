@@ -7,7 +7,7 @@ function WhyChooseUs() {
     <div className="my-16 px-6 lg:px-24">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
         <div className="text-left">
-          <h2 className="text-orange-500 font-semibold">Why Choose Us</h2>
+          <h2 className="text-red-700 font-semibold">Why Choose Us</h2>
           <h1 className="text-4xl font-bold text-gray-900 mt-2">
             Achieve your business goals with our web development solutions{" "}
           </h1>
@@ -24,7 +24,7 @@ function WhyChooseUs() {
           </p>
           <br />
           <p>
-            At Techiee, we’re not just building websites, we’re crafting digital
+            At Delt solutions, we’re not just building websites, we’re crafting digital
             masterpieces that move your business forward. Join hands with us,
             and see the unforgettable results and success of your business.
           </p>
