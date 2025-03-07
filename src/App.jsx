@@ -9,6 +9,7 @@ import ContactUs from "./pages/ContactUs";
 import Navbar from "./pages/Navbar";
 import { motion, useScroll } from "framer-motion";
 import Footer from "./pages/Footer";
+import Testimonials from "./pages/Components/TestimonialSection";
 
 function App() {
   const scrollYProgress = useScroll().scrollYProgress;
@@ -29,6 +30,7 @@ function App() {
         <Route path="/projects/:projectId" element={<ProjectDetails />} />
         <Route path="/about" element={<AboutSection />} />
         <Route path="/contact" element={<ContactUs />} />
+        <Route path="/testomonials" element={<Testimonials />} />
       </Routes>
       <Footer/>
    

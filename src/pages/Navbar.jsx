@@ -36,7 +36,7 @@ export default function Navbar() {
   }, [theme]);
 
   return (
-    <div className="sticky top-0 z-20 bg-white shadow-lg">
+    <div className="sticky top-0 z-20 bg-white/20 shadow-lg">
       <div className="border-b-[1px] border-slate-300 bg-white/5 backdrop-blur-lg">
         <div className="w-full px-6 py-3 flex justify-between items-center">
           {/* Logo */}
