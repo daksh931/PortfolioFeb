@@ -15,7 +15,8 @@ export default function Navbar() {
 
   // Theme toggle logic
   const [theme, setTheme] = useState(() => {
-    return typeof window !== "undefined" && localStorage.getItem("theme") === "dark"
+    return typeof window !== "undefined" &&
+      localStorage.getItem("theme") === "dark"
       ? "dark"
       : "light";
   });
@@ -45,6 +46,15 @@ export default function Navbar() {
              <span className="text-red-700 font-bold">DELT</span>  solutions 
             </Link>
           </div>
+          {/* <div className="flex items-center">
+            <Link to="/">
+              <img
+                src="/delt2.png"
+                alt="DELT Solutions"
+                className="h-11 w-auto"
+              />
+            </Link>
+          </div> */}
 
           {/* Desktop Navigation */}
           <div className="hidden sm:flex space-x-6">

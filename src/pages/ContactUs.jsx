@@ -20,7 +20,7 @@ function ContactUs() {
   };
 
   return (
-    <div className="my-16 px-6 lg:px-24">
+    <div className="my-16 px-6 lg:px-24 w-full overflow-hidden">
       <h2 className="text-4xl font-bold text-center mb-12">Contact Us</h2>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">

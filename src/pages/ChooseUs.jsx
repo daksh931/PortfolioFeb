@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 function WhyChooseUs() {
   return (
-    <div className="my-16 px-6 lg:px-24">
+    <div className="my-16 px-6 lg:px-24 w-full overflow-hidden">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
         <div className="text-left">
           <h2 className="text-red-700 font-semibold">Why Choose Us</h2>

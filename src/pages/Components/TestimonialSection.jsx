@@ -75,7 +75,7 @@ const Testimonials = () => {
   };
 
   return (
-    <section className="bg-gray-100 py-16 px-6">
+    <section className="bg-gray-100 py-16 px-6 w-full overflow-hidden">
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
