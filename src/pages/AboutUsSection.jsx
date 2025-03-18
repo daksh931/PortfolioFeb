@@ -9,7 +9,7 @@ const AboutSection = () => {
 
   return (
    
-    <section className="bg-white py-16 px-8">
+    <section className="bg-white py-16 px-8 w-full overflow-hidden">
       <motion.div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
         <div>
           <h2 className="text-red-700 font-semibold">About Us</h2>

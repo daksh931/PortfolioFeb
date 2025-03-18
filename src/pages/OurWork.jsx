@@ -31,7 +31,7 @@ const projects = [
 
 export default function OurWork() {
   return (
-    <div className="max-w-6xl mx-auto px-6 py-12">
+    <div className="max-w-6xl mx-auto px-6 py-12 w-full overflow-hidden">
       {/* Heading Section */}
       <div className="text-center mb-8">
         <h2 className="text-4xl font-bold text-center">Projects</h2>
